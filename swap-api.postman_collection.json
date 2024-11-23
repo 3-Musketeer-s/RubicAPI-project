@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "03aa6a7e-9a8f-4f4a-a16d-6d8ef951606d",
+		"name": "swap-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11610071"
+	},
+	"item": [
+		{
+			"name": "quoteBest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\r\n    \"dstTokenBlockchain\": \"POLYGON\",\r\n    \"referrer\": \"rubic.exchange\",\r\n    \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\r\n    \"srcTokenAmount\": \"1.05\",\r\n    \"srcTokenBlockchain\": \"ETH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4300/quote/Best",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"quote",
+						"Best"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "quoteBest",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\r\n    \"dstTokenBlockchain\": \"POLYGON\",\r\n    \"referrer\": \"rubic.exchange\",\r\n    \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\r\n    \"srcTokenAmount\": \"1.05\",\r\n    \"srcTokenBlockchain\": \"ETH\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4300/quote/Best",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4300",
+							"path": [
+								"quote",
+								"Best"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2599"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a27-5bNUq2nNwPFk2fiAGXtOp0CeICg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Nov 2024 14:31:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"estimate\": {\n        \"destinationTokenAmount\": \"6322.266772733907637066\",\n        \"destinationTokenMinAmount\": \"6132.598769551890407954\",\n        \"destinationUsdAmount\": 3648.85,\n        \"destinationUsdMinAmount\": 3539.38,\n        \"destinationWeiAmount\": \"6322266772733907637066\",\n        \"destinationWeiMinAmount\": \"6132598769551890407954\",\n        \"durationInMinutes\": 5,\n        \"priceImpact\": null,\n        \"slippage\": 0.03\n    },\n    \"fees\": {\n        \"gasTokenFees\": {\n            \"gas\": {\n                \"gasLimit\": \"0\",\n                \"gasPrice\": \"0\",\n                \"totalUsdAmount\": 0,\n                \"totalWeiAmount\": \"0\"\n            },\n            \"nativeToken\": {\n                \"address\": \"0x0000000000000000000000000000000000000000\",\n                \"blockchainId\": 1,\n                \"decimals\": 18,\n                \"name\": \"Ethereum\",\n                \"symbol\": \"ETH\"\n            },\n            \"protocol\": {\n                \"fixedAmount\": \"0.000591519969714177\",\n                \"fixedUsdAmount\": 2.06,\n                \"fixedWeiAmount\": \"591519969714177\"\n            },\n            \"provider\": {\n                \"fixedAmount\": \"0\",\n                \"fixedUsdAmount\": 0,\n                \"fixedWeiAmount\": \"0\"\n            }\n        },\n        \"percentFees\": {\n            \"percent\": 0,\n            \"token\": {\n                \"address\": \"0x0000000000000000000000000000000000000000\",\n                \"blockchainId\": 1,\n                \"decimals\": 18,\n                \"name\": \"Ethereum\",\n                \"symbol\": \"ETH\"\n            }\n        }\n    },\n    \"providerType\": \"symbiosis\",\n    \"quote\": {\n        \"nativeBlacklist\": [],\n        \"foreignBlacklist\": {\n            \"lifi\": [],\n            \"rango\": []\n        },\n        \"timeout\": 30,\n        \"referrer\": \"rubic.exchange\",\n        \"enableChecks\": false,\n        \"showFailedRoutes\": false,\n        \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n        \"dstTokenBlockchain\": \"POLYGON\",\n        \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n        \"srcTokenAmount\": \"1.05\",\n        \"srcTokenBlockchain\": \"ETH\",\n        \"integratorAddress\": \"0x3fFF9bDEb3147cE13A7FFEf85Dae81874E0AEDbE\",\n        \"slippage\": 0.03\n    },\n    \"routing\": [\n        {\n            \"path\": [\n                {\n                    \"address\": \"0x0000000000000000000000000000000000000000\",\n                    \"amount\": \"1.05\",\n                    \"blockchainId\": 1,\n                    \"decimals\": 18,\n                    \"name\": \"Ethereum\",\n                    \"symbol\": \"ETH\"\n                },\n                {\n                    \"address\": \"0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2\",\n                    \"amount\": \"0\",\n                    \"blockchainId\": 1,\n                    \"decimals\": 18,\n                    \"name\": \"Wrapped Ether\",\n                    \"symbol\": \"WETH\"\n                }\n            ],\n            \"provider\": \"SYMBIOSIS_SWAP\",\n            \"type\": \"on-chain\"\n        },\n        {\n            \"path\": [\n                {\n                    \"address\": \"0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2\",\n                    \"amount\": \"0\",\n                    \"blockchainId\": 1,\n                    \"decimals\": 18,\n                    \"name\": \"Wrapped Ether\",\n                    \"symbol\": \"WETH\"\n                },\n                {\n                    \"address\": \"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619\",\n                    \"amount\": \"0\",\n                    \"blockchainId\": 137,\n                    \"decimals\": 18,\n                    \"name\": \"Wrapped Ether\",\n                    \"symbol\": \"WETH\"\n                }\n            ],\n            \"provider\": \"symbiosis\",\n            \"type\": \"cross-chain\"\n        },\n        {\n            \"path\": [\n                {\n                    \"address\": \"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619\",\n                    \"amount\": \"0\",\n                    \"blockchainId\": 137,\n                    \"decimals\": 18,\n                    \"name\": \"Wrapped Ether\",\n                    \"symbol\": \"WETH\"\n                },\n                {\n                    \"address\": \"0x0000000000000000000000000000000000000000\",\n                    \"amount\": \"6322.266772733907637066\",\n                    \"blockchainId\": 137,\n                    \"decimals\": 18,\n                    \"name\": \"Matic Network\",\n                    \"symbol\": \"MATIC\"\n                }\n            ],\n            \"provider\": \"SYMBIOSIS_SWAP\",\n            \"type\": \"on-chain\"\n        }\n    ],\n    \"swapType\": \"cross-chain\",\n    \"transaction\": {\n        \"approvalAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\"\n    },\n    \"warnings\": [],\n    \"id\": \"0f18044d-b9d0-42da-bacb-4698256cd8ee\"\n}"
+				}
+			]
+		},
+		{
+			"name": "quoteAll",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n    \"dstTokenBlockchain\": \"POLYGON\",\n    \"referrer\": \"rubic.exchange\",\n    \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n    \"srcTokenAmount\": \"1.05\",\n    \"srcTokenBlockchain\": \"ETH\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4300/quote/All",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"quote",
+						"All"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "quoteAll",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n    \"dstTokenBlockchain\": \"POLYGON\",\n    \"referrer\": \"rubic.exchange\",\n    \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n    \"srcTokenAmount\": \"1.05\",\n    \"srcTokenBlockchain\": \"ETH\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4300/quote/All",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4300",
+							"path": [
+								"quote",
+								"All"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13101"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"332d-noFY7LPHvGM4aVySFojaKHHECq0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Nov 2024 14:31:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"quote\": {\n        \"nativeBlacklist\": [],\n        \"foreignBlacklist\": {\n            \"lifi\": [],\n            \"rango\": []\n        },\n        \"timeout\": 30,\n        \"referrer\": \"rubic.exchange\",\n        \"enableChecks\": false,\n        \"showFailedRoutes\": false,\n        \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n        \"dstTokenBlockchain\": \"POLYGON\",\n        \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n        \"srcTokenAmount\": \"1.05\",\n        \"srcTokenBlockchain\": \"ETH\",\n        \"integratorAddress\": \"0x3fFF9bDEb3147cE13A7FFEf85Dae81874E0AEDbE\",\n        \"slippage\": 0.03\n    },\n    \"routes\": [\n        {\n            \"estimate\": {\n                \"destinationTokenAmount\": \"6323.492230781888952707\",\n                \"destinationTokenMinAmount\": \"6133.787463858432284126\",\n                \"destinationUsdAmount\": 3649.55,\n                \"destinationUsdMinAmount\": 3540.07,\n                \"destinationWeiAmount\": \"6323492230781888952707\",\n                \"destinationWeiMinAmount\": \"6133787463858432284126\",\n                \"durationInMinutes\": 5,\n                \"priceImpact\": null,\n                \"slippage\": 0.03\n            },\n            \"fees\": {\n                \"gasTokenFees\": {\n                    \"gas\": {\n                        \"gasLimit\": \"0\",\n                        \"gasPrice\": \"0\",\n                        \"totalUsdAmount\": 0,\n                        \"totalWeiAmount\": \"0\"\n                    },\n                    \"nativeToken\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    },\n                    \"protocol\": {\n                        \"fixedAmount\": \"0.000591519969714177\",\n                        \"fixedUsdAmount\": 2.05,\n                        \"fixedWeiAmount\": \"591519969714177\"\n                    },\n                    \"provider\": {\n                        \"fixedAmount\": \"0\",\n                        \"fixedUsdAmount\": 0,\n                        \"fixedWeiAmount\": \"0\"\n                    }\n                },\n                \"percentFees\": {\n                    \"percent\": 0,\n                    \"token\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    }\n                }\n            },\n            \"providerType\": \"symbiosis\",\n            \"routing\": [\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Ethereum\",\n                            \"symbol\": \"ETH\"\n                        },\n                        {\n                            \"address\": \"0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2\",\n                            \"amount\": \"0\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        }\n                    ],\n                    \"provider\": \"SYMBIOSIS_SWAP\",\n                    \"type\": \"on-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2\",\n                            \"amount\": \"0\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        },\n                        {\n                            \"address\": \"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619\",\n                            \"amount\": \"0\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        }\n                    ],\n                    \"provider\": \"symbiosis\",\n                    \"type\": \"cross-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619\",\n                            \"amount\": \"0\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        },\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"6323.492230781888952707\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Matic Network\",\n                            \"symbol\": \"MATIC\"\n                        }\n                    ],\n                    \"provider\": \"SYMBIOSIS_SWAP\",\n                    \"type\": \"on-chain\"\n                }\n            ],\n            \"swapType\": \"cross-chain\",\n            \"transaction\": {\n                \"approvalAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\"\n            },\n            \"warnings\": [],\n            \"id\": \"5867411c-40b5-412c-8f0c-968610e307f3\"\n        },\n        {\n            \"estimate\": {\n                \"destinationTokenAmount\": \"6319.127147762511243541\",\n                \"destinationTokenMinAmount\": \"6129.553333329635906235\",\n                \"destinationUsdAmount\": 3647.03,\n                \"destinationUsdMinAmount\": 3537.62,\n                \"destinationWeiAmount\": \"6319127147762511243541\",\n                \"destinationWeiMinAmount\": \"6129553333329635906235\",\n                \"durationInMinutes\": 5,\n                \"priceImpact\": null,\n                \"slippage\": 0.03\n            },\n            \"fees\": {\n                \"gasTokenFees\": {\n                    \"gas\": {\n                        \"gasLimit\": \"0\",\n                        \"gasPrice\": \"0\",\n                        \"totalUsdAmount\": 0,\n                        \"totalWeiAmount\": \"0\"\n                    },\n                    \"nativeToken\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    },\n                    \"protocol\": {\n                        \"fixedAmount\": \"0.000591519969714177\",\n                        \"fixedUsdAmount\": 2.05,\n                        \"fixedWeiAmount\": \"591519969714177\"\n                    },\n                    \"provider\": {\n                        \"fixedAmount\": \"0\",\n                        \"fixedUsdAmount\": 0,\n                        \"fixedWeiAmount\": \"0\"\n                    }\n                },\n                \"percentFees\": {\n                    \"percent\": 0,\n                    \"token\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    }\n                }\n            },\n            \"providerType\": \"router\",\n            \"routing\": [\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Ethereum\",\n                            \"symbol\": \"ETH\"\n                        },\n                        {\n                            \"address\": \"0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        }\n                    ],\n                    \"provider\": \"ROUTER_SWAP\",\n                    \"type\": \"on-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        },\n                        {\n                            \"address\": \"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619\",\n                            \"amount\": \"1.049893459021553689\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        }\n                    ],\n                    \"provider\": \"router\",\n                    \"type\": \"cross-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619\",\n                            \"amount\": \"1.049893459021553689\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        },\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"6319.127147762511243541\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Matic Network\",\n                            \"symbol\": \"MATIC\"\n                        }\n                    ],\n                    \"provider\": \"ROUTER_SWAP\",\n                    \"type\": \"on-chain\"\n                }\n            ],\n            \"swapType\": \"cross-chain\",\n            \"transaction\": {\n                \"approvalAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\"\n            },\n            \"warnings\": [],\n            \"id\": \"bafd598c-3fc6-42dd-aa28-3994c7f69166\"\n        },\n        {\n            \"estimate\": {\n                \"destinationTokenAmount\": \"6311.951571875564250046\",\n                \"destinationTokenMinAmount\": \"6122.593024719297322545\",\n                \"destinationUsdAmount\": 3642.89,\n                \"destinationUsdMinAmount\": 3533.61,\n                \"destinationWeiAmount\": \"6311951571875564250046\",\n                \"destinationWeiMinAmount\": \"6122593024719297322545\",\n                \"durationInMinutes\": 5,\n                \"priceImpact\": 0.04,\n                \"slippage\": 0.03\n            },\n            \"fees\": {\n                \"gasTokenFees\": {\n                    \"gas\": {\n                        \"gasLimit\": \"0\",\n                        \"gasPrice\": \"0\",\n                        \"totalUsdAmount\": 0,\n                        \"totalWeiAmount\": \"0\"\n                    },\n                    \"nativeToken\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    },\n                    \"protocol\": {\n                        \"fixedAmount\": \"0.000591519969714177\",\n                        \"fixedUsdAmount\": 2.05,\n                        \"fixedWeiAmount\": \"591519969714177\"\n                    },\n                    \"provider\": {\n                        \"fixedAmount\": \"0\",\n                        \"fixedUsdAmount\": 0,\n                        \"fixedWeiAmount\": \"0\"\n                    }\n                },\n                \"percentFees\": {\n                    \"percent\": 0,\n                    \"token\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    }\n                }\n            },\n            \"providerType\": \"xy\",\n            \"routing\": [\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Ethereum\",\n                            \"symbol\": \"ETH\"\n                        },\n                        {\n                            \"address\": \"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619\",\n                            \"amount\": \"0\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        }\n                    ],\n                    \"provider\": \"xy\",\n                    \"type\": \"cross-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619\",\n                            \"amount\": \"0\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        },\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"6311.951571875564250046\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Matic Network\",\n                            \"symbol\": \"MATIC\"\n                        }\n                    ],\n                    \"provider\": \"XY_DEX\",\n                    \"type\": \"on-chain\"\n                }\n            ],\n            \"swapType\": \"cross-chain\",\n            \"transaction\": {\n                \"approvalAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\"\n            },\n            \"warnings\": [],\n            \"id\": \"80b9a959-510a-413c-a2e0-a53692fbfb49\"\n        },\n        {\n            \"estimate\": {\n                \"destinationTokenAmount\": \"6311.557196011630418764\",\n                \"destinationTokenMinAmount\": \"6122.210480131281506201\",\n                \"destinationUsdAmount\": 3642.66,\n                \"destinationUsdMinAmount\": 3533.38,\n                \"destinationWeiAmount\": \"6311557196011630418764\",\n                \"destinationWeiMinAmount\": \"6122210480131281506201\",\n                \"durationInMinutes\": 5,\n                \"priceImpact\": 0.05,\n                \"slippage\": 0.03\n            },\n            \"fees\": {\n                \"gasTokenFees\": {\n                    \"gas\": {\n                        \"gasLimit\": \"0\",\n                        \"gasPrice\": \"0\",\n                        \"totalUsdAmount\": 0,\n                        \"totalWeiAmount\": \"0\"\n                    },\n                    \"nativeToken\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    },\n                    \"protocol\": {\n                        \"fixedAmount\": \"0.000591519969714177\",\n                        \"fixedUsdAmount\": 2.05,\n                        \"fixedWeiAmount\": \"591519969714177\"\n                    },\n                    \"provider\": {\n                        \"fixedAmount\": \"0.000105724403598518\",\n                        \"fixedUsdAmount\": 0.37,\n                        \"fixedWeiAmount\": \"105724403598518\"\n                    }\n                },\n                \"percentFees\": {\n                    \"percent\": 0,\n                    \"token\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    }\n                }\n            },\n            \"providerType\": \"squidrouter\",\n            \"routing\": [\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"ETH\",\n                            \"symbol\": \"ETH\"\n                        },\n                        {\n                            \"address\": \"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped ETH\",\n                            \"symbol\": \"WETH\"\n                        }\n                    ],\n                    \"provider\": \"squidrouter\",\n                    \"type\": \"on-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped ETH\",\n                            \"symbol\": \"WETH\"\n                        },\n                        {\n                            \"address\": \"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\",\n                            \"amount\": \"3652.488239\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 6,\n                            \"name\": \"USDC\",\n                            \"symbol\": \"USDC\"\n                        }\n                    ],\n                    \"provider\": \"squidrouter\",\n                    \"type\": \"on-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\",\n                            \"amount\": \"3652.488239\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 6,\n                            \"name\": \"USDC\",\n                            \"symbol\": \"USDC\"\n                        },\n                        {\n                            \"address\": \"0x750e4c4984a9e0f12978ea6742bc1c5d248f40ed\",\n                            \"amount\": \"3652.488239\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 6,\n                            \"name\": \" USDC (Axelar)\",\n                            \"symbol\": \"USDC.axl\"\n                        }\n                    ],\n                    \"provider\": \"squidrouter\",\n                    \"type\": \"cross-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x750e4c4984a9e0f12978ea6742bc1c5d248f40ed\",\n                            \"amount\": \"3652.488239\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 6,\n                            \"name\": \" USDC (Axelar)\",\n                            \"symbol\": \"USDC.axl\"\n                        },\n                        {\n                            \"address\": \"0x2791bca1f2de4661ed88a30c99a7a9449aa84174\",\n                            \"amount\": \"3653.846424\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 6,\n                            \"name\": \"USDC.e\",\n                            \"symbol\": \"USDC.e\"\n                        }\n                    ],\n                    \"provider\": \"squidrouter\",\n                    \"type\": \"on-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x2791bca1f2de4661ed88a30c99a7a9449aa84174\",\n                            \"amount\": \"3653.846424\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 6,\n                            \"name\": \"USDC.e\",\n                            \"symbol\": \"USDC.e\"\n                        },\n                        {\n                            \"address\": \"0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270\",\n                            \"amount\": \"6311.557196011630418764\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped POL\",\n                            \"symbol\": \"WPOL\"\n                        }\n                    ],\n                    \"provider\": \"squidrouter\",\n                    \"type\": \"on-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270\",\n                            \"amount\": \"6311.557196011630418764\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped POL\",\n                            \"symbol\": \"WPOL\"\n                        },\n                        {\n                            \"address\": \"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\",\n                            \"amount\": \"6311.557196011630418764\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"POL\",\n                            \"symbol\": \"POL\"\n                        }\n                    ],\n                    \"provider\": \"squidrouter\",\n                    \"type\": \"on-chain\"\n                }\n            ],\n            \"swapType\": \"cross-chain\",\n            \"transaction\": {\n                \"approvalAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\"\n            },\n            \"warnings\": [],\n            \"id\": \"aa599997-9abf-4f89-a539-2b736ccf6ba0\"\n        },\n        {\n            \"estimate\": {\n                \"destinationTokenAmount\": \"6295.270941858960221443\",\n                \"destinationTokenMinAmount\": \"6106.4128136031914148\",\n                \"destinationUsdAmount\": 3633.27,\n                \"destinationUsdMinAmount\": 3524.27,\n                \"destinationWeiAmount\": \"6295270941858960221443\",\n                \"destinationWeiMinAmount\": \"6106412813603191414800\",\n                \"durationInMinutes\": 5,\n                \"priceImpact\": 0.3,\n                \"slippage\": 0.03\n            },\n            \"fees\": {\n                \"gasTokenFees\": {\n                    \"gas\": {\n                        \"gasLimit\": \"0\",\n                        \"gasPrice\": \"0\",\n                        \"totalUsdAmount\": 0,\n                        \"totalWeiAmount\": \"0\"\n                    },\n                    \"nativeToken\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    },\n                    \"protocol\": {\n                        \"fixedAmount\": \"0.000591519969714177\",\n                        \"fixedUsdAmount\": 2.05,\n                        \"fixedWeiAmount\": \"591519969714177\"\n                    },\n                    \"provider\": {\n                        \"fixedAmount\": \"0.001\",\n                        \"fixedUsdAmount\": 3.47,\n                        \"fixedWeiAmount\": \"1000000000000000\"\n                    }\n                },\n                \"percentFees\": {\n                    \"percent\": 0,\n                    \"token\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    }\n                }\n            },\n            \"providerType\": \"dln\",\n            \"routing\": [\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"1.05\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Ethereum\",\n                            \"symbol\": \"ETH\"\n                        },\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"1.04958\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Ethereum\",\n                            \"symbol\": \"ETH\"\n                        }\n                    ],\n                    \"provider\": \"DLN\",\n                    \"type\": \"on-chain\"\n                },\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x7ceb23fd6bc0add59e62ac25578270cff1b9f619\",\n                            \"amount\": \"1.04958\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Wrapped Ether\",\n                            \"symbol\": \"WETH\"\n                        },\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"6295.270941858960221443\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Matic Network\",\n                            \"symbol\": \"MATIC\"\n                        }\n                    ],\n                    \"provider\": \"DLN\",\n                    \"type\": \"on-chain\"\n                }\n            ],\n            \"swapType\": \"cross-chain\",\n            \"transaction\": {\n                \"approvalAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\"\n            },\n            \"warnings\": [],\n            \"id\": \"7fc00065-f6d5-4b71-b198-4e2aee26c183\"\n        },\n        {\n            \"estimate\": {\n                \"destinationTokenAmount\": \"6274.128405\",\n                \"destinationTokenMinAmount\": \"6085.90455285\",\n                \"destinationUsdAmount\": 3621.06,\n                \"destinationUsdMinAmount\": 3512.43,\n                \"destinationWeiAmount\": \"6274128405000000000000\",\n                \"destinationWeiMinAmount\": \"6085904552850000000000\",\n                \"durationInMinutes\": 5,\n                \"priceImpact\": 0.64,\n                \"slippage\": 0.03\n            },\n            \"fees\": {\n                \"gasTokenFees\": {\n                    \"gas\": {\n                        \"gasLimit\": \"0\",\n                        \"gasPrice\": \"0\",\n                        \"totalUsdAmount\": 0,\n                        \"totalWeiAmount\": \"0\"\n                    },\n                    \"nativeToken\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    },\n                    \"protocol\": {\n                        \"fixedAmount\": \"0.000591519969714177\",\n                        \"fixedUsdAmount\": 2.05,\n                        \"fixedWeiAmount\": \"591519969714177\"\n                    },\n                    \"provider\": {\n                        \"fixedAmount\": \"0\",\n                        \"fixedUsdAmount\": 0,\n                        \"fixedWeiAmount\": \"0\"\n                    }\n                },\n                \"percentFees\": {\n                    \"percent\": 0,\n                    \"token\": {\n                        \"address\": \"0x0000000000000000000000000000000000000000\",\n                        \"blockchainId\": 1,\n                        \"decimals\": 18,\n                        \"name\": \"Ethereum\",\n                        \"symbol\": \"ETH\"\n                    }\n                }\n            },\n            \"providerType\": \"rango\",\n            \"routing\": [\n                {\n                    \"path\": [\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"1.048425\",\n                            \"blockchainId\": 1,\n                            \"decimals\": 18,\n                            \"name\": \"Ethereum\",\n                            \"symbol\": \"ETH\"\n                        },\n                        {\n                            \"address\": \"0x0000000000000000000000000000000000000000\",\n                            \"amount\": \"6274.128405\",\n                            \"blockchainId\": 137,\n                            \"decimals\": 18,\n                            \"name\": \"Matic Network\",\n                            \"symbol\": \"MATIC\"\n                        }\n                    ],\n                    \"provider\": \"rango\",\n                    \"type\": \"cross-chain\"\n                }\n            ],\n            \"swapType\": \"cross-chain\",\n            \"transaction\": {\n                \"approvalAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\"\n            },\n            \"warnings\": [],\n            \"id\": \"6422a320-dad6-4489-b1d9-4e96343a99ec\"\n        }\n    ],\n    \"failed\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "swap",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n  \"dstTokenBlockchain\": \"POLYGON\",\n  \"referrer\": \"rubic.exchange\",\n  \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n  \"srcTokenAmount\": \"1.05\",\n  \"srcTokenBlockchain\": \"ETH\",\n  \"fromAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\",\n  \"id\": \"0f18044d-b9d0-42da-bacb-4698256cd8ee\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4300/swap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"swap"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "swap",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n  \"dstTokenBlockchain\": \"POLYGON\",\n  \"referrer\": \"rubic.exchange\",\n  \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n  \"srcTokenAmount\": \"1.05\",\n  \"srcTokenBlockchain\": \"ETH\",\n  \"fromAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\",\n  \"id\": \"0f18044d-b9d0-42da-bacb-4698256cd8ee\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4300/swap",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4300",
+							"path": [
+								"swap"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "139"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8b-lmBZQ9yldNtTQYnr6mg0WQrKddQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Nov 2024 14:33:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 306,\n    \"reason\": \"Trade can not be executed. You have not enough balance on 0x3335733c454805df6a77f825f266e136FB4a3333 wallet address\"\n}"
+				}
+			]
+		},
+		{
+			"name": "swapBest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n  \"dstTokenBlockchain\": \"POLYGON\",\n  \"srcTokenBlockchain\": \"ETH\",\n  \"srcTokenAmount\": \"1.05\",\n  \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n  \"id\": \"0f18044d-b9d0-42da-bacb-4698256cd8ee\",\n  \"enableChecks\": true,\n  \"fromAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\",\n  \"receiver\": \"0x3335733c454805df6a77f825f266e136FB4a3333\",\n  \"signature\": \"string\",\n  \"integratorAddress\": \"0x592D787e59b30Dd2FF2404118f052f49ba212611\",\n  \"slippage\": 0.02,\n  \"preferredProvider\": \"symbiosis\",\n  \"timeout\": 32,\n  \"enableTestnets\": false,\n  \"referrer\": \"rubic.exchange\",\n  \"showFailedRoutes\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4300/swap/Best",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"swap",
+						"Best"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "swapBest",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"srcTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n  \"dstTokenBlockchain\": \"POLYGON\",\n  \"srcTokenBlockchain\": \"ETH\",\n  \"srcTokenAmount\": \"1.05\",\n  \"dstTokenAddress\": \"0x0000000000000000000000000000000000000000\",\n  \"id\": \"0f18044d-b9d0-42da-bacb-4698256cd8ee\",\n  \"enableChecks\": true,\n  \"fromAddress\": \"0x3335733c454805df6a77f825f266e136FB4a3333\",\n  \"receiver\": \"0x3335733c454805df6a77f825f266e136FB4a3333\",\n  \"signature\": \"string\",\n  \"integratorAddress\": \"0x592D787e59b30Dd2FF2404118f052f49ba212611\",\n  \"slippage\": 0.02,\n  \"preferredProvider\": \"symbiosis\",\n  \"timeout\": 32,\n  \"enableTestnets\": false,\n  \"referrer\": \"rubic.exchange\",\n  \"showFailedRoutes\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4300/swap/Best",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4300",
+							"path": [
+								"swap",
+								"Best"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "139"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8b-lmBZQ9yldNtTQYnr6mg0WQrKddQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Nov 2024 14:38:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 306,\n    \"reason\": \"Trade can not be executed. You have not enough balance on 0x3335733c454805df6a77f825f266e136FB4a3333 wallet address\"\n}"
+				}
+			]
+		},
+		{
+			"name": "swap/status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4300/swap/Status?hash=0x6a851726e31e207dcea611424c194fb3ce132404598646b6903ee43fe8930e95",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"swap",
+						"Status"
+					],
+					"query": [
+						{
+							"key": "hash",
+							"value": "0x6a851726e31e207dcea611424c194fb3ce132404598646b6903ee43fe8930e95"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "swap/status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4300/swap/Status?hash=0x6a851726e31e207dcea611424c194fb3ce132404598646b6903ee43fe8930e95",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4300",
+							"path": [
+								"swap",
+								"Status"
+							],
+							"query": [
+								{
+									"key": "hash",
+									"value": "0x6a851726e31e207dcea611424c194fb3ce132404598646b6903ee43fe8930e95"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "190"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"be-vZ380EqleVhtGyfH4qLzTsqG/4A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Nov 2024 14:30:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"status\": \"SUCCESS\",\n        \"destinationTxHash\": \"0x5e8c67f32c11d5f5a44dd6e9a9f92bb5762ea0e41bda01c6a77228365b614e02\",\n        \"destinationNetworkTitle\": \"POLYGON\",\n        \"destinationNetworkChainId\": 137\n    }\n}"
+				}
+			]
+		}
+	]
+}
