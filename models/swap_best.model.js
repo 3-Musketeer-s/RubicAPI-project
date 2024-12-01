@@ -16,7 +16,9 @@ class swapBestModel {
         timeout = 32, 
         enableTestnets = false, 
         referrer = 'rubic.exchange', 
-        showFailedRoutes = false
+        showFailedRoutes = false,
+        nativeBlacklist = [],
+        foreignBlacklist = {}
     ) {
         this.srcTokenAddress = srcTokenAddress;
         this.srcTokenBlockchain = srcTokenBlockchain;
@@ -35,6 +37,8 @@ class swapBestModel {
         this.enableTestnets = enableTestnets;
         this.referrer = referrer;
         this.showFailedRoutes = showFailedRoutes;
+        this.nativeBlacklist = nativeBlacklist;
+        this.foreignBlacklist = foreignBlacklist;
     }
 }
 

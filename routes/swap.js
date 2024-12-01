@@ -76,7 +76,9 @@ router.post('/Best', async (req, res) => {
             req.body.timeout,                    
             req.body.enableTestnets,    
             req.body.referrer,    
-            req.body.showFailedRoutes 
+            req.body.showFailedRoutes,
+            req.body.nativeBlacklist,
+            req.body.foreignBlacklist
     );
 
         // Make a POST request to Rubic's API
@@ -130,7 +132,7 @@ router.get("/Status", async function (req, res, next) {
         res.json({ response });
     } catch (error) {
     // Handle errors
-    console.error("Error:", error.message || error.response.data);
+    console.error("Error:", error.message || error.response?.data);
     res.status(error.response?.status || 500).json({
       error: error.message || "An error occurred",
       details: error.response?.data || null,

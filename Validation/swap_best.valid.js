@@ -18,7 +18,12 @@ const swapBestValid = Joi.object({
     timeout: Joi.number().default(32),            
     enableTestnets: Joi.boolean().default(false),     
     referrer: Joi.string().default('rubic.exchange'),   
-    showFailedRoutes: Joi.boolean().default(false)      
+    showFailedRoutes: Joi.boolean().default(false) ,
+    nativeBlacklist: Joi.array().default([]),
+    foreignBlacklist: Joi.object({
+        lifi: Joi.array().default([]),
+        rango: Joi.array().default([])
+      }).default({ lifi: [], rango: [] })
 });
 
 module.exports = swapBestValid;
