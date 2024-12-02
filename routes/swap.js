@@ -20,7 +20,8 @@ router.post("/", async function (req, res, next) {
     if (error) {
       return res.status(400).json({ error: error.details[0].message });
     }
-    // Payload to send to Rubic API
+    
+    //Payload to send to Rubic API
     const payload = new swapModel(
       req.body.dstTokenAddress,
       req.body.dstTokenBlockchain,
@@ -32,12 +33,15 @@ router.post("/", async function (req, res, next) {
       req.body.id
     );
 
+    //console.log(payload);
+
     // Make a POST request to Rubic's API
     const response = await axios.post(
         `${rubicUrl}swap`,
         payload,
         { headers: { 'Content-Type': 'application/json' } }
     );
+    //console.log(response);
 
     // Send Rubic's API response back to the client
     res.status(200).json(response.data);

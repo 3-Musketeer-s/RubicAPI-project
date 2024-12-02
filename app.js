@@ -23,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(process.env.PORT || port, () => console.log('Swap API app listening'))
 
-app.use('/quote', quoteRouter);
 app.use('/swap',swapRouter);
+app.use('/quote', quoteRouter);
 // app.use('/wallet',walletRouter);
 
 // catch 404 and forward to error handler

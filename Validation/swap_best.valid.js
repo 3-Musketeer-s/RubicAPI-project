@@ -3,8 +3,8 @@ const Joi = require('joi');
 
 const swapBestValid = Joi.object({
     srcTokenAddress: Joi.string().required(),                    
-    srcTokenBlockchain: Joi.string().valid('ETH', 'POLYGON', 'BINANCE_SMART_CHAIN').required(), 
-    dstTokenBlockchain: Joi.string().valid('ETH', 'POLYGON', 'BINANCE_SMART_CHAIN').required(), 
+    srcTokenBlockchain: Joi.string().required(), 
+    dstTokenBlockchain: Joi.string().required(), 
     dstTokenAddress: Joi.string().required(),                    
     srcTokenAmount: Joi.number().greater(0).required(),        
     id: Joi.string().required(),              
