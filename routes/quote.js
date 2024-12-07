@@ -1,4 +1,8 @@
-var express = require("express");
+/**
+ * @file Quote Router for Rubic API
+ * @description This file defines routes for interacting with the Rubic API to fetch token swap quotes. 
+ * It provides endpoints to fetch the best quote or all possible quotes for a given token swap.
+ */var express = require("express");
 var router = express.Router();
 const axios = require('axios');
 require('dotenv').config();

@@ -1,3 +1,30 @@
+/**
+ * @file swap.js
+ * @description This file contains the route handlers for managing token swaps through the Rubic API. It defines multiple endpoints for performing swap operations, 
+ * including `/` for creating basic swaps, `/Best` for fetching the best swap quotes, and `/Status` for checking the status of a specific transaction using its hash. 
+ * The file includes validation of incoming requests using Joi, and utilizes models for payload structuring. 
+ * It communicates with Rubic's API for initiating and managing swaps and provides detailed error handling and logging. 
+ * Environment variables are used to configure API endpoints. 
+ * The file also contains placeholders for additional functionality like executing swaps and interacting with transaction-related models, though some functionality is commented out.
+ *
+ * @dependencies:
+ * - `express`: A web framework for building the API.
+ * - `axios`: A promise-based HTTP client used to make requests to external APIs (Rubic and Info APIs).
+ * - `dotenv`: Loads environment variables from the `.env` file.
+ * - `swapModel`, `swapBestModel`: Models used for structuring the request payloads for swaps and best swap requests.
+ * - `swapValid`, `swapBestValid`: Joi validation schemas to validate request bodies.
+ * 
+ * @endpoints:
+ * - `POST /`: Initiates a basic token swap using Rubic API.
+ * - `POST /Best`: Fetches the best possible token swap quote using Rubic's API.
+ * - `GET /Status`: Fetches the status of a transaction by its hash.
+ * 
+ * @note:
+ * - This file handles both simple and best swap quote requests.
+ * - It validates incoming requests before proceeding with Rubic API calls.
+ * - The `/Status` endpoint checks the transaction status by querying the Info API.
+ */
+
 var express = require("express");
 var router = express.Router();
 const axios = require('axios');
@@ -119,7 +146,7 @@ router.post('/Best', async (req, res) => {
 //         res.status(error.response?.status || 500).json({
 //             error: error.message || 'An error occurred',
 //             details: error.response?.data || null,
-//         });f
+//         });
 //     }
 // });
 
